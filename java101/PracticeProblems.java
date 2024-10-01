@@ -29,6 +29,7 @@ public class PracticeProblems {
         }
         return str + ")";
     }
+
     static int countOccurrences(int[] arr, int n){
         int counter = 0;
         for (int x : arr){
@@ -37,6 +38,15 @@ public class PracticeProblems {
             }
         }
         return counter;
+    }
+    static int[] reverseArray(int[] arr){
+        int[] newArr = new int[arr.length];
+        int i = 0;
+        for (int e : arr){
+            newArr[arr.length - i] = e;
+            i ++;
+        }
+        return newArr;
     }
 }
 
