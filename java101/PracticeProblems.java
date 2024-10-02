@@ -43,7 +43,7 @@ public class PracticeProblems {
         int[] newArr = new int[arr.length];
         int i = 0;
         for (int e : arr){
-            newArr[arr.length - i] = e;
+            newArr[arr.length -1 - i] = e;
             i ++;
         }
         return newArr;
