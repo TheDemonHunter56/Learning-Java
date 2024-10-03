@@ -48,5 +48,15 @@ public class PracticeProblems {
         }
         return newArr;
     }
+    static int sumGrid(int[][] arr){
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++ ){
+            for(int g = 0; g < arr[i].length; g++){
+                sum += arr[i][g];
+            }
+        }
+        return sum;
+    }
+    
 }
 
