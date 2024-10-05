@@ -7,4 +7,12 @@ public class Point {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public Point translateX(double t) {
+		return new Point(x + t, y);
+	}
+	
+	public Point translateY(double t) {
+		return new Point(x, y + t);
+	}
 }
