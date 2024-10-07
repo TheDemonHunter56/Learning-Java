@@ -41,4 +41,10 @@ public class Point {
 		Point centOfMass = new Point(xCoord, yCoord);
 		return centOfMass;
 	}
+	
+	public double angle(){
+		
+
+		return 1.0;
+	}
 }
