@@ -51,7 +51,7 @@ public class Point {
 		double angleGamma = 90;
 		
 		//find angle alpha with law of sines
-		angleAlpha = (Math.asin(Math.sin(angleGamma*Math.PI/180) * sideAlpha / sideGamma));
+		angleAlpha = (Math.asin(Math.sin(angleGamma*Math.PI/180) * sideAlpha / sideGamma * Math.PI/180));
 		System.out.println((Math.asin(Math.sin(angleGamma*Math.PI/180)*Math.PI/180)));
 		return angleAlpha;
 
