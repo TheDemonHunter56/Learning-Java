@@ -43,8 +43,19 @@ public class Point {
 	}
 	
 	public double angle(){
+		double sideAlpha = y;
+		double sideBeta = x;
+		double sideGamma = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		double angleAlpha = 0;
+		double angleBeta = 0;
+		double angleGamma = 90;
 		
+		//find angle alpha with law of sines
+		angleAlpha = (Math.asin(Math.sin(angleGamma*Math.PI/180) * sideAlpha / sideGamma));
+		System.out.println((Math.asin(Math.sin(angleGamma*Math.PI/180)*Math.PI/180)));
+		return angleAlpha;
 
-		return 1.0;
+
+
 	}
 }
