@@ -1,0 +1,37 @@
+Arrays
+
+    type[] (name) = {Elements of the rainbow};
+
+    Or if you want to make an array with ___ amount of terms in it,
+
+    type[] name = new type[num_of_terms];
+
+    for 2d arrays,
+
+    type[][] name = follow steps above
+
+Loops
+
+    while (condition){
+
+    }
+
+    for (type element : collection){
+        (very similar to for i in (list) in python, must specify the list type)
+    }
+
+    for (define variable; condition; code to update variable) {
+	// code to run
+    }
+    EX. for(int i = 0; i < 5; i++)
+
+Functions
+
+    static (return type) (name)(argument type arguments){
+
+    }
+    EX. static double returnDouble(double x)
+
+Classes
+
+    
