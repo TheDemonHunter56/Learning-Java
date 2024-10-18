@@ -43,27 +43,17 @@ public class Point {
 	}
 	
 	public double angle(){
-		double sideAlpha = y;
-		//double sideBeta = x;
-		double sideGamma = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
-		double angleAlpha = 0;
-		//double angleBeta = 0;
-		double angleGamma = 90;
-		double help = (Math.sin(angleGamma*Math.PI/180) * sideAlpha) / sideGamma;
-		//find angle alpha with law of sines
-		angleAlpha = (Math.asin(help * Math.PI/180));
-		System.out.println(help);
-		return angleAlpha;
-		/* 
-			  sin(angleGamma) * sideAlpha
-		asin (-----------------------) = angleAlpha
-			  			SideGamma
+		double sideAlpha = x;
+		double sideGamma = y;
+		double hypotenuse = (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
+		double result = Main.lawOfCosine(hypotenuse, sideAlpha, sideGamma);
+		return result;
+	}
 
-
-		*/
-		 
-
-
-
+	public Point Rotation(double theta){
+		double radian = theta * Math.PI / 180;
+		double xPrime = x * Math.cos(radian) - y * Math.sin(radian);
+		double yPrime = x * Math.sin(radian) + y * Math.cos(radian);
+		return new Point(xPrime, yPrime);
 	}
 }
