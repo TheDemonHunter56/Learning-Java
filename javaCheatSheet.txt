@@ -27,11 +27,38 @@ Loops
 
 Functions
 
-    static (return type) (name)(argument type arguments){
+    public (- optional) static (return type) (name)(argument type arguments){
 
     }
     EX. static double returnDouble(double x)
 
 Classes
 
+    public class (capital Name) {
+        public final (variable type variable name, similar to self x = x);
+
+        (Constructor - how to initialize an object)
+        public Point(all variables){
+            this.var1 = var1
+            this.var2 = var2
+        }
+        (Class Methods)
+        public (return type) (method name)((input var type)(var name)){
+            **code**
+            return (var) *Var must be the same return type as specified above 
+        }
+        (toString) a method to make the printed object's values legible to humans
+
+        @Override *important keyword, overrides default toString method
+        public String toString(){
+            return (format of things surrounding the object's values)
+        }
+    }
+
+    initializing an object
+
+    (class name) (object name) = new (class name(values for variables))
+
+ArrayLists
     
+    *Must have *import java.util.ArrayLists;* - imports ArrayLists*

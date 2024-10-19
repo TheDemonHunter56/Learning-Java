@@ -2,7 +2,11 @@ package java102;
 public class Point {
 	public final double x;
 	public final double y;
-
+	
+	public static double lawOfCosine(double a, double b, double c){
+        double result = Math.acos((Math.pow(a, 2)+Math.pow(b, 2)-Math.pow(c, 2))/2*a*b);
+        return result;
+    }
 	public Point(double x, double y) {
 		this.x = x;
 		this.y = y;
@@ -46,7 +50,7 @@ public class Point {
 		double sideAlpha = x;
 		double sideGamma = y;
 		double hypotenuse = (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
-		double result = Main.lawOfCosine(hypotenuse, sideAlpha, sideGamma);
+		double result = lawOfCosine(hypotenuse, sideAlpha, sideGamma);
 		return result;
 	}
 

@@ -1,12 +1,7 @@
 package java102;
-
 import java.util.ArrayList;
 
 public class Main {
-    public static double lawOfCosine(double a, double b, double c){
-        double result = Math.acos((Math.pow(a, 2)+Math.pow(b, 2)-Math.pow(c, 2))/2*a*b);
-        return result;
-    }
     public static void main(String[] args) {
         ArrayList<String> arr = new ArrayList<>();
         arr.add("Hello");
@@ -17,6 +12,13 @@ public class Main {
         conditions.add(true);
         conditions.add(arr.get(0) == "Hello");
         conditions.add(conditions.get(0) || conditions.get(1));
+
+        ArrayList<Integer> intArr = new ArrayList<>();
+        for (int i = 0; i < 50; i++) {
+            intArr.add(0);
+        }
+        System.out.println(intArr.size());
+        System.out.println(intArr.get(32));
     }
     
 }
