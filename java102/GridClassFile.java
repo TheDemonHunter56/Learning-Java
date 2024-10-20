@@ -5,7 +5,8 @@ public class GridClassFile {
     static public class Grid<T> {
         private final ArrayList<ArrayList<T>> grid;
         public final int sideLength;
-
+        static int maxSideLength = 0;
+        
         public Grid(int sideLength, T defaultVal) {
             this.sideLength = sideLength;
             this.grid = new ArrayList<ArrayList<T>>(sideLength);
@@ -14,6 +15,9 @@ public class GridClassFile {
                 for (int j = 0; j < sideLength; j++) {
                     grid.get(i).add(defaultVal);
                 }
+            }
+            if (sideLength > maxSideLength){
+                maxSideLength = sideLength;
             }
         }
 
@@ -37,11 +41,16 @@ public class GridClassFile {
             return str;
         }
 
-        public ArrayList<T> diagonal(){
-            ArrayList<Integer> arr = new ArrayList<>();
+        public ArrayList<T> diagonal(Grid<T> grid){
+            ArrayList<T> arr = new ArrayList<>();
             for (int i = 0; i < sideLength; i++){
-                arr.add(grid.get(i));
+                arr.add(grid.get(i, i));
             }
+            return arr;
+        }
+
+        public static int maxSideLength(){
+            return maxSideLength;
         }
     }
 }
