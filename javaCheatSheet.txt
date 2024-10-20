@@ -6,7 +6,7 @@ Arrays
 
     type[] name = new type[num_of_terms];
 
-    for 2d arrays,
+    for 2+ d arrays,
 
     type[][] name = follow steps above
 
@@ -31,6 +31,9 @@ Functions
 
     }
     EX. static double returnDouble(double x)
+    
+    to call Functions
+    (name)(values)
 
 Classes
 
@@ -62,3 +65,6 @@ Classes
 ArrayLists
     
     *Must have *import java.util.ArrayLists;* - imports ArrayLists*
+
+    initialize ArrayLists
+    ArrayList<(capitalized full word of type of list) (list name) = new ArrayList<>();

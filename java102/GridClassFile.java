@@ -1,8 +1,8 @@
 package java102;
 import java.util.ArrayList;
 
-public class GridClass {
-    public class Grid<T> {
+public class GridClassFile {
+    static public class Grid<T> {
         private final ArrayList<ArrayList<T>> grid;
         public final int sideLength;
 
@@ -35,6 +35,13 @@ public class GridClass {
                 str += "\n";
             }
             return str;
+        }
+
+        public ArrayList<T> diagonal(){
+            ArrayList<Integer> arr = new ArrayList<>();
+            for (int i = 0; i < sideLength; i++){
+                arr.add(grid.get(i));
+            }
         }
     }
 }
