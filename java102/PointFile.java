@@ -1,7 +1,7 @@
 package java102;
 
 public class PointFile{
-	static public class Point {
+	public static class Point {
 		public final double x;
 		public final double y;
 		
