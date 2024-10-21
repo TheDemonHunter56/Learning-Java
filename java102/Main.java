@@ -1,9 +1,9 @@
 package java102;
 import java.util.ArrayList;
-import java102.GridClassFile.Grid;
-import java102.CircleFile.Circle;
-import java102.SquareFile.Square;
-import java102.PointFile.Point;
+import java102.Grid;
+import java102.Circle;
+import java102.Square;
+import java102.Point;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +19,6 @@ public class Main {
             new Circle(new Point(4, 9.123), 98.32),
             new Square(new Point(-321, 0), 0.02)};
         System.out.println(sumArea(shapes));
-
     }
     static <T> String arrayToString(T[] arr) {
         String str = "[";
