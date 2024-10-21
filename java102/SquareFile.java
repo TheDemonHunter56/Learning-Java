@@ -1,10 +1,22 @@
 package java102;
+import java102.PointFile.Point;
+import java102.Main.Shape;
 
-public class SquareFile {
-    static public class Square {
+public class SquareFile{
+    static public class Square implements Shape{
         public final Point corner;
         public final double sideLength;
-    
+        
+        /**
+         * 
+         * @param boolean
+         * @param boolean
+         * @return The exclusive or value of the 2 booleans
+         */
+        public static boolean logicalXOR(boolean x, boolean y) {
+            return ( ( x || y ) && ! ( x && y ) );
+        }
+
         /**
         * @param corner The bottom left corner of the square
         * @param sideLength
@@ -36,7 +48,9 @@ public class SquareFile {
         * @return Whether point p part of/on the border of the square.
         */
         public boolean isOn(Point p) {
-            return false; //write this
+            if(logicalXOR(p.x == corner.x, p.y == corner.y) == true){
+                return true;
+            }else return false;
         }
         
         /** 
@@ -44,8 +58,8 @@ public class SquareFile {
         * @param y How much to translate the squarer by in the + y direction.
         * @return The sqaure that results from the translation.
         */
-        public Square translate(double x, double y, Point p) {
-            return new Square(p,1); //write this
+        public Square translate(double x, double y) {
+            return new Square(corner.translateX(x).translateY(y), sideLength); //write this
         }
     
         /** 
@@ -56,7 +70,10 @@ public class SquareFile {
         }
     
         public Point[] corners() {
-            Point[] arr = {corner}; //write this
+            Point bottomRight = new Point(corner.x + sideLength, corner.y);
+            Point topRight = new Point(corner.x + sideLength, corner.y + sideLength);
+            Point topLeft = new Point(corner.x, corner.y + sideLength);
+            Point[] arr = {corner, bottomRight, topRight, topLeft};
             return arr;
         }
     

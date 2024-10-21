@@ -1,13 +1,21 @@
 package java102;
+import java102.PointFile.Point;
+import java102.Main.Shape;
+//import java102.TriangleFile.Triangle;
 
 public class CircleFile {
-    static public class Circle {
+    public static class Circle implements Shape{
         public final Point center;
         public final double radius;
     
         public Circle(Point center, double radius) {
             this.center = center;
             this.radius = radius;
+        }
+
+        public static Circle fromPoints(Point p1, Point p2, Point p3){
+            Circle cir1 = new Circle(p1, 5);
+            return cir1;
         }
     
         public double area() {
