@@ -1,7 +1,5 @@
 package java102;
-import java102.Point;
 import java102.Main.Shape;
-import java102.Triangle;
 
 public class Circle implements Shape{
     public final Point center;
@@ -13,7 +11,9 @@ public class Circle implements Shape{
     }
 
     public static Circle fromPoints(Point p1, Point p2, Point p3){
-        Circle cir1 = new Circle(p1, 5);
+        Triangle tri1 = new Triangle(p1, p2, p3);
+        Point circumcenter = tri1.circumcenter();
+        Circle cir1 = new Circle(circumcenter, Point.distance(p1, circumcenter));
         return cir1;
     }
 

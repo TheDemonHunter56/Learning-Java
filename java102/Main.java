@@ -1,9 +1,5 @@
 package java102;
 import java.util.ArrayList;
-import java102.Grid;
-import java102.Circle;
-import java102.Square;
-import java102.Point;
 
 public class Main {
     public static void main(String[] args) {

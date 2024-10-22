@@ -1,5 +1,4 @@
 package java102;
-import java102.Point;
 
 public class Triangle{
     public final Point a;
