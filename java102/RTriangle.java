@@ -20,6 +20,17 @@ public class RTriangle implements Shape{
         return arr;
     }
 
+    public double[] angles(){
+        double distAB = distances()[0];
+        double distAC = distances()[1];
+        double distBC = distances()[2];
+        double angleA = Point.lawOfCosineAngle(distAB, distAC, distBC);
+        double angleB = Point.lawOfCosineAngle(distAB, distBC, distAC);
+        double angleC = Point.lawOfCosineAngle(distAC, distBC, distAB);
+        double [] arr = {angleA, angleB, angleC};
+        return arr;
+    }
+
     public double perimeter(){
         double distAB = distances()[0];
         double distAC = distances()[1];
@@ -59,5 +70,29 @@ public class RTriangle implements Shape{
         Point aPrime = new Point(a.x * k, a.y * k);
         Point cPrime = new Point(c.x * k, c.y * k);
         return new RTriangle(aPrime, rightPoint, cPrime);
+    }
+
+    public static boolean similar(RTriangle rt1, RTriangle rt2){
+        double[] rt1Sides = rt1.distances();
+        double[] rt1Angles = rt1.angles();
+      
+        double[] rt2Sides = rt2.distances();
+        double[] rt2Angles = rt2.angles();
+        int counter = 0;
+        
+        //AA similarity
+        for (double i : rt1Angles){
+            for (double g : rt2Angles){
+                if (i == g){
+                    counter ++;
+                }
+                if(counter == 2){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+
     }
 }

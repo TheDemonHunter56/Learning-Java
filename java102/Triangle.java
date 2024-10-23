@@ -20,9 +20,10 @@ public class Triangle{
         double angleA = Point.lawOfCosineAngle(distAB, distAC, distBC);
         double angleB = Point.lawOfCosineAngle(distAB, distBC, distAC);
         double angleC = Point.lawOfCosineAngle(distAC, distBC, distAB);
-        double [] arr = {distAB, distAC, distBC, angleA, angleB, angleC};
+        double [] arr = {angleA, angleB, angleC};
         return arr;
     }
+
     public Triangle(Point a, Point b, Point c){
         this.a = a;
         this.b = b;
