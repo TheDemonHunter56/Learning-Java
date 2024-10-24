@@ -1,5 +1,6 @@
 package java102;
 import java102.Main.Shape;
+import java.util.Arrays;
 
 public class RTriangle implements Shape{
     public final Point a;
@@ -74,25 +75,36 @@ public class RTriangle implements Shape{
 
     public static boolean similar(RTriangle rt1, RTriangle rt2){
         double[] rt1Sides = rt1.distances();
+        java.util.Arrays.sort(rt1Sides);
         double[] rt1Angles = rt1.angles();
-      
+
         double[] rt2Sides = rt2.distances();
+        java.util.Arrays.sort(rt2Sides);
         double[] rt2Angles = rt2.angles();
         int counter = 0;
         
         //AA similarity
-        for (double i : rt1Angles){
+        outerloop: for (double i : rt1Angles){
             for (double g : rt2Angles){
                 if (i == g){
                     counter ++;
                 }
                 if(counter == 2){
                     return true;
-                }
+                }else continue outerloop;
             }
         }
-
+        //SSS similarity
+        double a = rt1Sides[0]/rt2Sides[0];
+        double b = rt1Sides[1]/rt2Sides[1];
+        double c = rt1Sides[2]/rt2Sides[2];
+        if (a == b && b == c){
+            return true;
+        }
+        //SAS, ASS, SSA similarity - ratios are the same and both triangles have a right angle
+        if((Math.abs(a-b) < 1e-6) || (Math.abs(a-c) < 1e-6) || (Math.abs(b-c) < 1e-6)){
+            return true;
+        }
         return false;
-
     }
 }
