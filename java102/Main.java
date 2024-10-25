@@ -3,19 +3,47 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(5);
-
-        Grid<Integer> grid = new Grid<>(5, 0);
-        grid.get(0, 0);
-
-        Shape[] shapes = {new Circle(new Point(1.8, -20), 2), 
-            new Square(new Point(100, 2.1), 5.4),
-            new Circle(new Point(0, 0), 1),
-            new Circle(new Point(4, 9.123), 98.32),
-            new Square(new Point(-321, 0), 0.02)};
-        System.out.println(sumArea(shapes));
+        
     }
+    public class A {
+        protected final double field1;
+        protected final double field2;
+    
+        public A(double field1, double field2) {
+            System.out.println("the constructor of A has been called");
+            this.field1 = field1;
+            this.field2 = field2;
+        }
+    
+        public void method1() {
+            System.out.println("method 1 of A has been called");
+        }
+        
+        public void method2() {
+            System.out.println("method 2 of A has been called");
+        }
+    }
+    
+    public class B extends A {
+        public final String bField;
+        
+        public B(double field1and2, String bField) {
+            super(field1and2, field1and2);
+            this.bField = bField;
+            System.out.println("the constructor of B has been called");
+        }
+    
+        @Override 
+        public void method2() {
+            System.out.println("method 2 of B has been called");
+        }
+    
+        public double field() {
+            return super.field1;
+        }
+    }
+
+
     static <T> String arrayToString(T[] arr) {
         String str = "[";
         for (int i = 0; i < arr.length - 1; i++) {
