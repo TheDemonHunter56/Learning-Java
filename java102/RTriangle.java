@@ -1,6 +1,5 @@
 package java102;
 import java102.Main.Shape;
-import java.util.Arrays;
 
 public class RTriangle implements Shape{
     public final Point a;
