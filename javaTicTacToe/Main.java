@@ -6,6 +6,8 @@ public class Main {
         boolean i = true;
         while(board.getWinner() == 0){
             board.move(i);
+            i = !i;
+            System.out.println(board);
         }
     }
 }
