@@ -9,19 +9,11 @@ public class Main {
             System.out.println(board);
             board.move(i);
             i = !i;
-            OUTERLOOP: for(int k = 0; k < 3; k ++){
-                for(int j = 0; j < 3; j ++){
-                    if(board.arr[k][j] != 0){
-                        counter ++;
-                    }else{
-                        break OUTERLOOP;
-                    }
-                }
-            }
+            counter ++;
             if(counter == 9 && board.getWinner() == 0){
-                System.out.println("Its a tie!");
+                System.out.println("It's a tie!");
+                break;
             }
         }
-        board.closeScanner();
     }
 }

@@ -46,23 +46,23 @@ public class Board {
         for (int i = 0; i < 3; i++) {
             // Check rows
             if (arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2] && arr[i][0] != 0) {
-                System.out.println("Player playing " + arr[i][0] + " wins!");
+                System.out.println("Player playing " + arr[i][0] + " wins by winning a row!");
                 return arr[i][0];
             }
             // Check columns
             if (arr[0][i] == arr[1][i] && arr[1][i] == arr[2][i] && arr[0][i] != 0) {
-                System.out.println("Player playing " + arr[0][i] + " wins!");
+                System.out.println("Player playing " + arr[0][i] + " wins by winning a column!");
                 return arr[0][i];
             }
         }
 
         // Check diagonals
         if (arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[0][0] != 0) {
-            System.out.println("Player playing " + arr[0][0] + " wins!");
+            System.out.println("Player playing " + arr[0][0] + " wins by winning the diagonal from top left to bottom right!");
             return arr[0][0];
         }
         if (arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0] && arr[0][2] != 0) {
-            System.out.println("Player playing " + arr[0][2] + " wins!");
+            System.out.println("Player playing " + arr[0][2] + " wins by winning the diagonal from the top right to bottom left!");
             return arr[0][2];
         }
 
