@@ -2,7 +2,7 @@ package javaTicTacToe;
 import java.util.Scanner;
 
 public class Board {
-    private int[][] arr = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+    public int[][] arr = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     public final Scanner scan = new Scanner(System.in);
 
     public Board(){}
@@ -66,7 +66,6 @@ public class Board {
             return arr[0][2];
         }
 
-        System.out.println("Its a tie!");
         return 0;
     }
 
