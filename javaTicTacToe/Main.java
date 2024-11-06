@@ -9,14 +9,6 @@ public class Main {
             i = !i;
             System.out.println(board);
         }
+        board.closeScanner();
     }
 }
-
-
-/*
- * 2d array of int, -1, 0, 1 done
- * toString to print board done
- * get space method done
- * move method - error if space is full, game is over, if not given valid place, if not valid player
- * getWinner method done
- */
