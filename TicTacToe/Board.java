@@ -1,10 +1,8 @@
-package javaTicTacToe;
+package TicTacToe;
 
 
 public class Board {
-    public int[][] arr = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-
-    public Board(){}
+    public int[][] arr = new int[3][3];
 
     public int getSpace(int row, int column){
         return arr[row-1][column-1];

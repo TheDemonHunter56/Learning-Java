@@ -1,4 +1,4 @@
-package javaTicTacToe;
+package TicTacToe;
 import java.util.Scanner;
 
 public class Main {
@@ -12,10 +12,10 @@ public class Main {
             System.out.println(board);
             i = !i;
             player = i ? 1 : -1;
-            System.out.println("Player playing " + player + " is up. What row do you want your move to be in?");
+            System.out.println("Player playing " + player + " is up. What row do you want your move to be in?\n");
             int row = scan.nextInt();
            
-            System.out.println("What column do you want your move to be in?");
+            System.out.println("What column do you want your move to be in?\n");
             int col = scan.nextInt();
 
             board.move(row, col, i);
