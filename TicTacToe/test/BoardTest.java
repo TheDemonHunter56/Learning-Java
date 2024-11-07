@@ -6,6 +6,6 @@ import org.junit.Test;
 public class BoardTest {
     @Test
     public void testMove() {
-        
+        assert true;
     }
 }

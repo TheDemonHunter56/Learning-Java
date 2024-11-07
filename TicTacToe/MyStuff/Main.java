@@ -1,4 +1,4 @@
-package TicTacToe;
+package TicTacToe.MyStuff;
 import java.util.Scanner;
 
 public class Main {
