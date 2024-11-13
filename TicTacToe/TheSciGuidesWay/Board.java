@@ -50,7 +50,7 @@ public class Board {
 
     /** @return Whether either of the diagonals has been won */
     private boolean diagonalWon() {
-        return setWon(board[1][1], board[0][0], board[2][2]) || setWon(board[0][2], board[1][1], board[2][0]);
+        return setWon(board[0][0], board[1][1], board[2][2]) || setWon(board[0][2], board[1][1], board[2][0]);
     }
 
     public int winner() {
@@ -64,9 +64,10 @@ public class Board {
         }
         return 0;
     }
+    
     public boolean over(){
         if(winner() != 0){
-            return true;
+            return true; 
         }
         for(int i = 0; i < 3; i ++){
             for(int j = 0; j < 3; j ++){
@@ -75,6 +76,7 @@ public class Board {
                 }
             }
         }
+        return false;
     }
 }
 
