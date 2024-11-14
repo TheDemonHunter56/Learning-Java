@@ -35,6 +35,9 @@ public class Board {
         if(player != 1 && player != -1){
             throw new RuntimeException("That is not a valid player! Please pick -1(O) or 1(X).");
         }
+        if(over()){
+            throw new RuntimeException("Sorry, the game is over.");
+        }
         board[row][column] = player;
     }
     /** @return whether a set of three spaces are won by one player */
@@ -64,15 +67,19 @@ public class Board {
         }
         return 0;
     }
-    
+
     public boolean over(){
         if(winner() != 0){
             return true; 
         }
+        int counter = 0;
         for(int i = 0; i < 3; i ++){
             for(int j = 0; j < 3; j ++){
-                if(board[i][j] == 0){
-                    return false;
+                if(board[i][j] != 0){
+                    counter ++;
+                }
+                if(counter == 9){
+                    return true;
                 }
             }
         }

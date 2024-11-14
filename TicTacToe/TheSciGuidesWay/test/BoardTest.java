@@ -34,7 +34,12 @@ public void testMove() {
 	assertThrows(RuntimeException.class, () -> b.move(-1, 2, 0));
 	// check that you can't give an int other than 1 or -1 as player
 	assertThrows(RuntimeException.class, () -> b.move(0, 2, 2));
+	b.move(1, 0, 0);
+	b.move(1, 1, 0);
+	// check that you can't move after a board is already won
+	assertThrows(RuntimeException.class, () -> b.move(1, 2, 2));
 }
+
 @Test
 public void testWinner() {
 	Board b1 = new Board();
