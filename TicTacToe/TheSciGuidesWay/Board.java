@@ -3,7 +3,7 @@ package TicTacToe.TheSciGuidesWay;
 public class Board {
     public final int[][] board = new int[3][3];
 
-    public static String playerToString(int player) {
+    public String playerToString(int player) {
         if (player == -1) {
             return "O";
         } else if (player == 0) {
@@ -72,6 +72,20 @@ public class Board {
         if(winner() != 0){
             return true; 
         }
+        int counter = 0;
+        for(int i = 0; i < 3; i ++){
+            for(int j = 0; j < 3; j ++){
+                if(board[i][j] != 0){
+                    counter ++;
+                }
+                if(counter == 9){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public boolean tie(){
         int counter = 0;
         for(int i = 0; i < 3; i ++){
             for(int j = 0; j < 3; j ++){
