@@ -9,7 +9,7 @@ public class Game {
 	public static void main(String[] args) {
         while(board.over() == false){
             System.out.println(board);
-            System.out.println("It is " + board.playerToString(currentPlayer) + "'s turn.");
+            System.out.println("It is " + Board.playerToString(currentPlayer) + "'s turn.");
             System.out.println("What row (1 - 3) do you want to move in?");
             int row = sc.nextInt() + -1;
             System.out.println("What column (1 - 3) do you want to move it?");
@@ -21,7 +21,7 @@ public class Game {
         if(board.tie()){
             System.out.println("It was a tie. Good game!");
         }else{
-            System.out.println("The person playing " + board.playerToString(board.winner()) + " won. Congradulations on your useless achievement.");
+            System.out.println("The person playing " + Board.playerToString(board.winner()) + " won. Congradulations on your useless achievement.");
         }
 	}
 }
