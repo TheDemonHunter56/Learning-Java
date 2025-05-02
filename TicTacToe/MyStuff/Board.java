@@ -1,5 +1,3 @@
-package TicTacToe.MyStuff;
-
 
 public class Board {
     public int[][] arr = new int[3][3];

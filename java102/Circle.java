@@ -1,7 +1,8 @@
 package java102;
-import java102.Main.Shape;
 
-public class Circle implements Shape{
+import java102.ShapeInter.Shape;
+
+public class Circle implements Shape {
     public final Point center;
     public final double radius;
 

@@ -1,5 +1,5 @@
 package java102;
-import java102.Main.Shape;
+import java102.ShapeInter.Shape;
 
 public class Square implements Shape{
     public final Point corner;

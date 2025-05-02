@@ -1,4 +1,3 @@
-package java101;
 public class PracticeProblems {
     public static void main(String[] args){
 
